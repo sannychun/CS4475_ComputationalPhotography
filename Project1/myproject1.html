@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS4475 Project1</title>
+</head>
+<body>
+
+<h1><center>CS 4475 Project 1 Summer 2016</center></h1>
+<h1><center>"4 Seasons"</center></h1>
+<h2><center>Sanghyun Chun</center></h2>
+<h3><center>GTID: 902759995 (schun41)</center></h3>
+<p><b>Project Description:</b></p>
+<p>
+<b><a href="http://cobweb.cs.uga.edu/~maria/classes/2016-CompPhoto/P1to3.html">Assignment Page Link</a></b><br>
+<p></p>
+After learning the basic image manipulation techniques in this class, I found it fascinating that I could detect a certain spectrum of colors and change it at will.<br>
+Therefore, I decided to try to imitate the seasonal changes of a given image.<br>
+Here are the original images:<br>
+</p>
+
+<center>
+<p><b>Spring</b></p>
+<img src="original1.jpg" width="400" height="300">
+<img src="original2.jpg" width="400" height="300">
+<img src="original3.jpg" width="400" height="300">
+</center>
+
+<p>
+I decided to start with Spring. If anybody wishes to try this project for yourselves, make sure you choose a image that looks like it was taken in Spring.<br>
+So let's set Springas our starting point. Then I make a mask detecting the color green, and set everything in the given range a value of 1. Anything else gets a value of 0.<br>
+Here are the respective masks:<br>
+</p>
+
+<center>
+<p><b>Masks</b></p>
+<img src="mask1.jpg" width="400" height="300">
+<img src="mask2.jpg" width="400" height="300">
+<img src="mask3.jpg" width="400" height="300">
+</center>
+
+<p>
+In the next step, for every value of 1 in the mask, I change the color in that specific pixel location.<br>
+I made 3 functions to replicate the seasonal changes: changeToSummer, changeToFall and changeToWinter. Here they are:<br>
+</p>
+<p><b>P.S. You can find my source code here: <a href="myproject1.py">myproject1.py</a></b></p>
+
+<center>
+<p><b>Summer</b></p>
+<img src="summer1.jpg" width="400" height="300">
+<img src="summer2.jpg" width="400" height="300">
+<img src="summer3.jpg" width="400" height="300">
+</center>
+
+<center>
+<p><b>Fall</b></p>
+<img src="fall1.jpg" width="400" height="300">
+<img src="fall2.jpg" width="400" height="300">
+<img src="fall3.jpg" width="400" height="300">
+</center>
+
+<center>
+<p><b>Winter</b></p>
+<img src="winter1.jpg" width="400" height="300">
+<img src="winter2.jpg" width="400" height="300">
+<img src="winter3.jpg" width="400" height="300">
+</center>
+
+<center>
+<p>
+<b>CREDIT</b><br>
+Images were found at:<br>
+<a href="http://www.vbctulsa.com/wordpress/wp-content/uploads/2015/02/wrackthetree.jpg">http://www.vbctulsa.com/wordpress/wp-content/uploads/2015/02/wrackthetree.jpg</a><br>
+<a href="http://kingofwallpapers.com/jungle/jungle-004.jpg">http://kingofwallpapers.com/jungle/jungle-004.jpg</a><br>
+<a href="https://upload.wikimedia.org/wikipedia/commons/9/92/Christmas_tree_farm_IA.JPG">https://upload.wikimedia.org/wikipedia/commons/9/92/Christmas_tree_farm_IA.JPG</a><br>
+</p>
+</center>
+
+</body>
+</html>
