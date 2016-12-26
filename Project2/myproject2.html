@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS4475 Project2</title>
+</head>
+<body>
+
+<h1><center>CS 4475 Project 2 Summer 2016</center></h1>
+<h1><center>"Cartoon Effect"</center></h1>
+<h2><center>Sanghyun Chun</center></h2>
+<h3><center>GTID: 902759995 (schun41)</center></h3>
+<p><b>Project Description:</b></p>
+<p>
+<b><a href="http://cobweb.cs.uga.edu/~maria/classes/2016-CompPhoto/P1to3.html">Assignment Page Link</a></b><br>
+<p></p>
+This time I attempted to re-process a given image and give it a "cartoon" filter, with exagerated outlines and color contrast.
+This is my attempt at incorporating Gaussian Pyramid that we learned in class.<br>
+<br>
+Here is some examples:<br>
+</p>
+
+<center>
+<p><b>Original Image</b></p>
+<img src="paris_original.jpg" width="400" height="300">
+<img src="cristiano_original.jpg" width="400" height="300">
+<img src="me_original.jpg" width="300" height="400">
+</center>
+
+<p>
+To apply a cartoon filter, we must first determine where all the edges are. Therefore I created a mask that contains all the edges 
+of the given image. The steps to making a mask is as follows:<br>
+<br>
+1. Convert to grayscale<br>
+2. Blur image<br>
+3. Detect edges using cv2.adaptiveThreshold()<br>
+<br>
+Here are the masks:<br>
+</p>
+
+<center>
+<p><b>Edge Mask</b></p>
+<img src="paris_mask.jpg" width="400" height="300">
+<img src="cristiano_mask.jpg" width="400" height="300">
+<img src="me_mask.jpg" width="300" height="400">
+</center>
+
+<p>
+In the next step, for every value of 1 in the mask, I change the color in that specific pixel location.<br>
+I made 3 functions to replicate the seasonal changes: changeToSummer, changeToFall and changeToWinter. Here they are:<br>
+</p>
+<p><b>P.S. You can find my source code here: <a href="myproject2.py">myproject2.py</a></b></p>
+
+<p>
+I opted to save the mask file under the name of "edge.jpg".<br>
+Once I found all the edges, I convert the image back to color. Then I save the final image, and display it:<br>
+</p>
+
+<center>
+<p><b>Final image</b></p>
+<img src="paris_cartoon.jpg" width="400" height="300">
+<img src="cristiano_cartoon.jpg" width="400" height="300">
+<img src="me_cartoon.jpg" width="300" height="400">
+</center>
+
+<center>
+<p>
+<b>CREDIT</b><br>
+Images were found at:<br>
+<a href="http://www.travelandleisure.com/sites/default/files/styles/1600x1000/public/1454344088/Paris-France-Stowe-Writer-Guide-QUOTES0116.jpg?itok=qQQ2dyuw">http://www.travelandleisure.com/sites/default/files/styles/1600x1000/public/1454344088/Paris-France-Stowe-Writer-Guide-QUOTES0116.jpg?itok=qQQ2dyuw</a><br>
+<a href="http://specials-images.forbesimg.com/imageserve/573c6b334bbe6f63618536ea/0x0.jpg?fit=scale&background=000000">http://specials-images.forbesimg.com/imageserve/573c6b334bbe6f63618536ea/0x0.jpg?fit=scale&background=000000</a><br>
+</p>
+</center>
+
+<br>
+<p>
+<center>
+<b>RESOURCES</b><br>
+<a href="http://www.learnopencv.com/non-photorealistic-rendering-using-opencv-python-c/">http://www.learnopencv.com/non-photorealistic-rendering-using-opencv-python-c/</a><br>
+<a href="http://www.shellandslate.com/fastmedian.html">http://www.shellandslate.com/fastmedian.html/</a><br>
+<a href="http://docs.opencv.org/master/d7/d4d/tutorial_py_thresholding.html#gsc.tab=0">http://docs.opencv.org/master/d7/d4d/tutorial_py_thresholding.html#gsc.tab=0</a><br>
+</center>
+</p>
+
+</body>
+</html>
