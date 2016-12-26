@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CS4475 Project3</title>
+</head>
+<body>
+
+<h1><center>CS 4475 Project 3 Summer 2016</center></h1>
+<h1><center>"Mosaic Maker"</center></h1>
+<h2><center>Sanghyun Chun</center></h2>
+<h3><center>GTID: 902759995 (schun41)</center></h3>
+<p><b>Project Description:</b></p>
+<p>
+<b><a href="http://cobweb.cs.uga.edu/~maria/classes/2016-CompPhoto/P1to3.html">Assignment Page Link</a></b><br>
+<p></p>
+This project remakes a given image into a mosaic image. Each "tile" is another image that the user saved in the source folder.<br>
+The code calculates the average color of each source image: it then places it in the coordinate that has the closest matching color.<br>
+<br>
+Here are some examples:<br>
+</p>
+
+<center>
+<p><b>Original Image</b></p>
+<img src="french_flag_orig.jpg" width="400" height="300">
+<img src="korean_flag_orig.jpg" width="400" height="300">
+<img src="obama_orig.jpg" width="300" height="400">
+</center>
+
+<p>
+Here is the general breakdown of what the code does:<br>
+<br>
+1. Resize all the source images into 15 x 12 images<br>
+2. Place those "tiles" in the "/mosaics" folder<br>
+3. Calculate average color of each tile image<br>
+4. Compare each tile average color with pixels in original image
+5. If the color difference is smaller than the given difference, replace it with whatever there is currently.
+<br>
+Here are the random images that we will use for our tiles:<br>
+</p>
+
+<center>
+<p><b>Source Images</b></p>
+<img src="sources\flag_black.jpg" width="400" height="300">
+<img src="sources\flag_white.jpg" width="400" height="300">
+<img src="sources\flag_blue.jpg" width="400" height="300">
+<img src="sources\flag_red.jpg" width="400" height="300">
+<img src="sources\skin.jpg" width="400" height="300">
+<img src="sources\brown.jpg" width="400" height="300">
+</center>
+
+<p>
+Here they are once they get resized and placed in the /mosaics folder:<br>
+<center>
+<p><b>Tile Images</b></p>
+<img src="mosaics\flag_black.jpg" width="15" height="12">
+<img src="mosaics\flag_white.jpg" width="15" height="12">
+<img src="mosaics\flag_blue.jpg" width="15" height="12">
+<img src="mosaics\flag_red.jpg" width="15" height="12">
+<img src="mosaics\skin.jpg" width="15" height="12">
+<img src="mosaics\brown.jpg" width="15" height="12">
+</center>
+
+<p>
+The resulting output images:<br>
+You can see that each color on the original image is replaced by the tile image with the closest matching color scheme.
+</p>
+
+<center>
+<p><b>Final Images</b></p>
+<img src="french_flag.jpg" width="400" height="300">
+<img src="korean_flag.jpg" width="400" height="300">
+<img src="obama.jpg" width="300" height="400">
+</center>
+
+<p><b>P.S. You can find my source code here: <a href="myproject3.py">myproject3.py</a></b></p>
+
+<center>
+<p>
+<b>CREDIT</b><br>
+Images were found at:<br>
+<a href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2000px-Flag_of_South_Korea.svg.png">https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/Flag_of_South_Korea.svg/2000px-Flag_of_South_Korea.svg.png</a><br>
+<a href="http://specials-images.forbesimg.com/imageserve/573c6b334bbe6f63618536ea/0x0.jpg?fit=scale&background=000000">http://specials-images.forbesimg.com/imageserve/573c6b334bbe6f63618536ea/0x0.jpg?fit=scale&background=000000</a><br>
+
+<a href="https://wallpaperscraft.com/image/roses_petals_flower_red_90476_3840x2160.jpg">https://wallpaperscraft.com/image/roses_petals_flower_red_90476_3840x2160.jpg</a><br>
+<a href="https://static.pexels.com/photos/1346/blue-abstract-balls-spheres.jpg">https://static.pexels.com/photos/1346/blue-abstract-balls-spheres.jpg</a><br>
+<a href="http://eskipaper.com/images/black-backgrounds-11.jpg">http://eskipaper.com/images/black-backgrounds-11.jpg</a><br>
+<a href="http://www.parloursupply.com/media/catalog/product/cache/14/image/9df78eab33525d08d6e5fb8d27136e95/p/r/productshot_960x500_pulver.png">http://www.parloursupply.com/media/catalog/product/cache/14/image/9df78eab33525d08d6e5fb8d27136e95/p/r/productshot_960x500_pulver.png</a><br>
+
+<a href="http://pngimg.com/upload/face_PNG5660.png">http://pngimg.com/upload/face_PNG5660.png</a><br>
+<a href="http://orig13.deviantart.net/037d/f/2012/042/f/4/seamless_human_skin_by_hhh316-d4pfpwv.jpg">http://orig13.deviantart.net/037d/f/2012/042/f/4/seamless_human_skin_by_hhh316-d4pfpwv.jpg</a><br>
+<a href="http://kingofwallpapers.com/brown/brown-024.jpg">http://kingofwallpapers.com/brown/brown-024.jpg</a><br>
+</p>
+</center>
+
+<br>
+<p>
+<center>
+<b>RESOURCES</b><br>
+<a href="https://staff.fnwi.uva.nl/r.vandenboomgaard/IPCV/LABS_2013_2014/Lab_ImageMosaic.html">https://staff.fnwi.uva.nl/r.vandenboomgaard/IPCV/LABS_2013_2014/Lab_ImageMosaic.html</a><br>
+<a href="http://answers.opencv.org/question/88376/convert-raw-image-into-mosaic-image-representation/">http://answers.opencv.org/question/88376/convert-raw-image-into-mosaic-image-representation/</a><br>
+<a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html">http://docs.scipy.org/doc/numpy/reference/generated/numpy.ndarray.html</a><br>
+<a href="http://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html">http://docs.scipy.org/doc/numpy/reference/generated/numpy.zeros.html</a><br>
+</center>
+</p>
+
+</body>
+</html>
